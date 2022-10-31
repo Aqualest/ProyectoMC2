@@ -1,4 +1,5 @@
 from tkinter import *
+from PIL import Image, ImageTk
 class interfaz:
     def __init__(self, ventana):
         #ventana
@@ -8,12 +9,18 @@ class interfaz:
         ventana.resizable(0,0)
         ventana.configure(bg="orange")
         #imagenes
-        img1=PhotoImage(file="")
-        lbl_img1=Label(ventana, image=img1)
-        lbl_img1.pack()
-        img2=PhotoImage(file="")
-        lbl_img2=Label(ventana, image=img1)
-        lbl_img2.pack()
+        ime1=Image.open('nube3.png')
+        self.img1=ImageTk.PhotoImage(ime1)
+        lbl_img1=Label(ventana, image=self.img1)
+        lbl_img1.place(x=10,y=0,width=100,height=100)
+        #lbl_img1.pack()
+        ime2=Image.open('nube2.gif')
+        self.img2=ImageTk.PhotoImage(ime2)
+        lbl_img2=Label(ventana, image=self.img2)
+        lbl_img2.place(x=150,y=0,width=100,height=100)
+        '''img2=PhotoImage(file="nube3.png")
+        lbl_img2=Label(ventana, image=img2)
+        lbl_img2.pack()'''
         #labels
         lbl_vertice=Label(ventana,text="Vertice")
         lbl_vertice.place(x=10,y=300)
@@ -42,8 +49,8 @@ class interfaz:
         #botones
         agregar_vertice=Button(ventana, text="Agregar Vertice", bg="lightblue", fg="black")
         agregar_vertice.place(x=130,y=330)
-        agregar_peso=Button(ventana, text="Agregar Peso", bg="lightblue", fg="black")
-        agregar_peso.place(x=130,y=430)
+        #agregar_peso=Button(ventana, text="Agregar Peso", bg="lightblue", fg="black")
+        #gregar_peso.place(x=130,y=430)
         agregar_arista=Button(ventana,text="Agregar Arista", bg="lightblue", fg="black")
         agregar_arista.place(x=10,y=430)
         generar=Button(ventana, text="Generar", bg="lightblue", fg="black")
