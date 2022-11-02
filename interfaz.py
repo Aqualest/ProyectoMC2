@@ -9,18 +9,20 @@ class interfaz:
         ventana.resizable(0,0)
         ventana.configure(bg="orange")
         #imagenes
-        ime1=Image.open('nube3.png')
+        """
+        ime1=Image.open('Serperior.jpg')
         self.img1=ImageTk.PhotoImage(ime1)
         lbl_img1=Label(ventana, image=self.img1)
         lbl_img1.place(x=10,y=0)
         #lbl_img1.pack()
-        ime2=Image.open('nube2.gif')
+        ime2=Image.open('Midna.jfif')
         self.img2=ImageTk.PhotoImage(ime2)
         lbl_img2=Label(ventana, image=self.img2)
         lbl_img2.place(x=150,y=0)
         '''img2=PhotoImage(file="nube3.png")
         lbl_img2=Label(ventana, image=img2)
         lbl_img2.pack()'''
+        """
         #labels
         lbl_vertice=Label(ventana,text="Vertice")
         lbl_vertice.place(x=10,y=300)
