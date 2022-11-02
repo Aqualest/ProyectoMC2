@@ -118,7 +118,6 @@ class Grafo:
                             self.esCiclo(resal, resal.conexion2)
                         else:
                             continue
-        
 
     def encontrarMinimal(self):
         vertices = []
@@ -174,9 +173,9 @@ class Grafo:
                 contador += arista.peso
         return contador
 
-
+"""
 # Pruebas
-'''G = Grafo()
+G = Grafo()
 
 # Pruebas con vertices
 G.agregarVertice('A')
@@ -212,9 +211,9 @@ G.agregarArista(5, 'G', 'I')
 G.agregarArista(1, 'H', 'I')
 G.agregarArista(4, 'G', 'H')
 G.agregarArista(4, 'H', 'J')
-G.agregarArista(3, 'I', 'J')'''
+G.agregarArista(3, 'I', 'J')
 
-'''
+
 print('Nombres de vertices')
 for vert in G.listaVertices:
     print(vert.nombre)
@@ -222,15 +221,17 @@ for vert in G.listaVertices:
 print('Nombres de Aristas')
 for aris in G.listaAristas:
     print(f'Peso: {aris.peso}, Con1: {aris.conexion1.nombre}, Con2: {aris.conexion2.nombre}')
-'''
+
 
 # Render
-'''Render.graficarGrafo(G, minimal=False)
-Render.renderizar(mini=False)'''
+Render.graficarGrafo(G, minimal=False)
+Render.renderizar(mini=False)
 # Minimal
-#G.encontrarMinimal()
-'''# Render otra vez con minimal
+G.encontrarMinimal()
+# Render otra vez con minimal
 Render.graficarGrafo(G, minimal=True)
 Render.renderizar(mini=True)
 
-print(G.contarPesoMinimo())'''
+print(G.contarPesoMinimo())
+
+"""
